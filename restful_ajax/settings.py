@@ -7,9 +7,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = '8k9-*n^m_kgfaxt0u@@recgf9moyi599d2gqh!81nnng(jijut'
 
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['vclinicapi.herokuapp.com']
+ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -18,16 +18,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'djoser',
     'rest_framework',
-    'rest_framework_simplejwt',
     'accounts.apps.AccountsConfig',
     'doctors.apps.DoctorsConfig',
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -55,12 +52,6 @@ TEMPLATES = [
     },
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
-    ),
-}
-
 # WSGI_APPLICATION = 'restful_ajax.wsgi.application'
 
 DATABASES = {
@@ -73,21 +64,6 @@ DATABASES = {
         'PASSWORD': 'root',
     }
 }
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': os.environ['ENGINE'],
-#         'NAME': os.environ['NAME'],
-#         'USER': os.environ['USER'],
-#         'PASSWORD': os.environ['PASSWORD'],
-#         'HOST': os.environ['HOST'],
-#         'PORT': os.environ['PORT'],
-#     }
-# }
-
-# DATABASE_URL = os.environ['DATABASE_URL']
-
-# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -118,10 +94,6 @@ STATIC_URL = '/static/'
 
 # MEDIA_URL = '/media/'
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
-
 # Logging
 
 LOGGING = {
@@ -140,15 +112,15 @@ LOGGING = {
     },
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
-
-BASE_URL = 'http://localhost:8000'
-
-LOGIN_REDIRECT_URL = '/api/doctors/add'
-
 DEBUG_PROPAGATE_EXCEPTIONS = True
 
-#STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
+
+STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+
+BASE_URL = 'http://localhost:8000'
 
 prod_db = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(prod_db)
