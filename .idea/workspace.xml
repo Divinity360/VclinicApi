@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b2cc8d7d-b117-41b5-b4c9-8159e03b9b2a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/restful_ajax/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/restful_ajax/settings.py" afterDir="false" />
-    </list>
+    <list default="true" id="b2cc8d7d-b117-41b5-b4c9-8159e03b9b2a" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,12 +316,12 @@
       <workItem from="1580720754732" duration="1374000" />
       <workItem from="1580751530226" duration="3233000" />
       <workItem from="1580757813345" duration="4624000" />
-      <workItem from="1580815532718" duration="28986000" />
+      <workItem from="1580815532718" duration="29662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63936000" />
+    <option name="totallyTimeSpent" value="64612000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
