@@ -6,31 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Divinity Doctor Management Api With Ajax</title>
     {% load static %}
-    <link rel="shortcut icon" href="{%  static 'i.ico' %}">
+    <link rel="shortcut icon" href="{% static 'i.ico' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
 
-    <div class="form">
-        <label><strong>Add Doctor</strong></label>
-        <input type="text" class="doctor_name" placeholder="Doctor Name">
-        <input type="number" class="price" placeholder="Doctor Charges Price">
-        <input type="number" class="phone" placeholder="Phone">
-        <input type="number" class="discount" placeholder="Charge Discount (%)">
-        <input type="text" class="description" placeholder="Description">
-        <input type="text" class="category" placeholder="Doctors Position">
-        <button class="save">Add New Doctor</button>
-    </div>
+<div class="form">
+    <label><strong>Add Doctor</strong></label>
+    <input type="text" class="doctor_name" placeholder="Doctor Name">
+    <input type="number" class="price" placeholder="Doctor Charges Price">
+    <input type="number" class="phone" placeholder="Phone">
+    <input type="number" class="discount" placeholder="Charge Discount (%)">
+    <input type="text" class="description" placeholder="Description">
+    <input type="text" class="category" placeholder="Doctors Position">
+    <button class="save">Add New Doctor</button>
+</div>
 
-    <div class="cards-warpper">
-        <span class="loading" style="text-align: center;">loading ...</span>
-    </div>
+<div class="cards-warpper">
+    <span class="loading" style="text-align: center;">loading ...</span>
+</div>
 
-    <script src="{% static 'js/csrf_token.js' %}" charset="utf-8"></script>
-    <script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
-    <script src="{% static 'js/all_doctors.js' %}" charset="utf-8"></script>
-    <script src="{% static 'js/add_doctor.js' %}" charset="utf-8"></script>
-    <script src="{% static 'js/delete_doctor.js' %}" charset="utf-8"></script>
-    <script src="{% static 'js/edit_doctor.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/csrf_token.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/jquery.min.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/all_doctors.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/add_doctor.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/delete_doctor.js' %}" charset="utf-8"></script>
+<script src="{% static 'js/edit_doctor.js' %}" charset="utf-8"></script>
 </body>
 </html>
