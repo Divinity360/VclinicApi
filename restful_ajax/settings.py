@@ -61,29 +61,29 @@ REST_FRAMEWORK = {
     ),
 }
 
-WSGI_APPLICATION = 'restful_ajax.wsgi.application'
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'vclinic',
-#         'HOST': 'localhost',
-#         'PORT': '5432',
-#         'USER': 'postgres',
-#         'PASSWORD': 'root',
-#     }
-# }
+# WSGI_APPLICATION = 'restful_ajax.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': os.environ['ENGINE'],
-        'NAME': os.environ['NAME'],
-        'USER': os.environ['USER'],
-        'PASSWORD': os.environ['PASSWORD'],
-        'HOST': os.environ['HOST'],
-        'PORT': os.environ['PORT'],
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'vclinic',
+        'HOST': 'localhost',
+        'PORT': '5432',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': os.environ['ENGINE'],
+#         'NAME': os.environ['NAME'],
+#         'USER': os.environ['USER'],
+#         'PASSWORD': os.environ['PASSWORD'],
+#         'HOST': os.environ['HOST'],
+#         'PORT': os.environ['PORT'],
+#     }
+# }
 
 DATABASE_URL = os.environ['DATABASE_URL']
 
