@@ -1,6 +1,7 @@
 import os
 import dj_database_url
 import django_heroku
+import psycopg2
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -62,16 +63,31 @@ REST_FRAMEWORK = {
 
 # WSGI_APPLICATION = 'restful_ajax.wsgi.application'
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'vclinic',
+#         'HOST': 'localhost',
+#         'PORT': '5432',
+#         'USER': 'postgres',
+#         'PASSWORD': 'root',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'vclinic',
-        'HOST': 'localhost',
-        'PORT': '5432',
-        'USER': 'postgres',
-        'PASSWORD': 'root',
+        'ENGINE': os.environ['ENGINE'],
+        'NAME': os.environ['NAME'],
+        'USER': os.environ['USER'],
+        'PASSWORD': os.environ['PASSWORD'],
+        'HOST': os.environ['HOST'],
+        'PORT': os.environ['PORT'],
     }
 }
+
+DATABASE_URL = os.environ['DATABASE_URL']
+
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 AUTH_PASSWORD_VALIDATORS = [
     {
