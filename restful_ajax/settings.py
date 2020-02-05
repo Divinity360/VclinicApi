@@ -61,7 +61,7 @@ REST_FRAMEWORK = {
     ),
 }
 
-# WSGI_APPLICATION = 'restful_ajax.wsgi.application'
+WSGI_APPLICATION = 'restful_ajax.wsgi.application'
 
 # DATABASES = {
 #     'default': {
