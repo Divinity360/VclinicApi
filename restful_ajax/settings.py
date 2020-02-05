@@ -8,7 +8,7 @@ SECRET_KEY = '8k9-*n^m_kgfaxt0u@@recgf9moyi599d2gqh!81nnng(jijut'
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['https://vclinicapi.herokuapp.com/']
+ALLOWED_HOSTS = ['vclinicapi.herokuapp.com']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
