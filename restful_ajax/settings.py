@@ -146,6 +146,8 @@ BASE_URL = 'http://localhost:8000'
 
 LOGIN_REDIRECT_URL = '/api/doctors/add'
 
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 prod_db = dj_database_url.config(conn_max_age=500)
