@@ -114,7 +114,7 @@ USE_L10N = True
 
 USE_TZ = True
 
-STATIC_URL = '/app/static/'
+STATIC_URL = '/static/'
 
 # MEDIA_URL = '/media/'
 
@@ -140,7 +140,7 @@ LOGGING = {
     },
 }
 
-STATIC_ROOT = os.path.join(BASE_DIR, "static_cdn")
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
 BASE_URL = 'http://localhost:8000'
 
